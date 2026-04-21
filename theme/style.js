@@ -136,18 +136,60 @@ var eXeHackerStyle = {
         });
 
         // --- Sidebar (menu) toggler ----------------------------------------
-        // Persist collapsed state in localStorage.exeHackerRail = "off"|"on".
+        // Desktop default: rail visible; collapsed state persisted in
+        // localStorage.exeHackerRail = "off"|"on" via body.siteNav-off.
+        // Mobile default: rail hidden off-canvas; opened via body.siteNav-open
+        // (not persisted — always starts closed on narrow viewports).
+        var mobileQ = window.matchMedia ? window.matchMedia("(max-width: 880px)") : null;
+        var isMobile = function () { return !!(mobileQ && mobileQ.matches); };
+
+        var self = this;
         var railStored = this.isLocalStorageAvailable() ? localStorage.getItem("exeHackerRail") : null;
-        if (railStored === "off") {
+        if (isMobile()) {
+            $("#menuToggler").attr("aria-pressed", "false");
+        } else if (railStored === "off") {
             $("body").addClass("siteNav-off");
             $("#menuToggler").attr("aria-pressed", "false");
         }
+
         $(document).on("click", "#menuToggler", function () {
-            var nowOff = !$("body").hasClass("siteNav-off");
-            $("body").toggleClass("siteNav-off", nowOff);
-            $(this).attr("aria-pressed", nowOff ? "false" : "true");
-            try { localStorage.setItem("exeHackerRail", nowOff ? "off" : "on"); } catch (e) {}
+            if (isMobile()) {
+                var nowOpen = !$("body").hasClass("siteNav-open");
+                $("body").toggleClass("siteNav-open", nowOpen);
+                $(this).attr("aria-pressed", nowOpen ? "true" : "false");
+            } else {
+                var nowOff = !$("body").hasClass("siteNav-off");
+                $("body").toggleClass("siteNav-off", nowOff);
+                $(this).attr("aria-pressed", nowOff ? "false" : "true");
+                try { localStorage.setItem("exeHackerRail", nowOff ? "off" : "on"); } catch (e) {}
+            }
         });
+
+        // Close the mobile drawer when the user taps a nav link (they'll navigate anyway)
+        $(document).on("click", "#siteNav a", function () {
+            if (isMobile() && $("body").hasClass("siteNav-open")) {
+                $("body").removeClass("siteNav-open");
+                $("#menuToggler").attr("aria-pressed", "false");
+            }
+        });
+
+        // Keep state coherent across viewport changes: leaving mobile clears the
+        // transient open flag; entering mobile clears any desktop-persisted off flag.
+        var syncRailOnResize = function () {
+            if (isMobile()) {
+                $("body").removeClass("siteNav-off");
+                $("#menuToggler").attr("aria-pressed", $("body").hasClass("siteNav-open") ? "true" : "false");
+            } else {
+                $("body").removeClass("siteNav-open");
+                var off = self.isLocalStorageAvailable() && localStorage.getItem("exeHackerRail") === "off";
+                $("body").toggleClass("siteNav-off", off);
+                $("#menuToggler").attr("aria-pressed", off ? "false" : "true");
+            }
+        };
+        if (mobileQ) {
+            if (mobileQ.addEventListener) mobileQ.addEventListener("change", syncRailOnResize);
+            else if (mobileQ.addListener) mobileQ.addListener(syncRailOnResize);
+        }
 
         // --- Search toggler (reveals #exe-client-search) -------------------
         $(document).on("click", "#searchToggler", function () {
