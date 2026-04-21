@@ -119,6 +119,36 @@ html.exe-light-mode body::before {
         linear-gradient(180deg, #fafffc 0%, #eef6f1 100%);
 }
 
+/* Light-mode rail: white background instead of the dark CRT gradient. */
+html.exe-light-mode #siteNav {
+    background:
+        linear-gradient(180deg, #ffffff, #f2f7f4),
+        var(--hk-bg);
+    border-right: 1px solid var(--hk-accent-dim);
+    color: var(--hk-accent-ink);
+}
+html.exe-light-mode #siteNav::before {
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0, transparent 2px,
+        rgba(0, 0, 0, 0.05) 3px, rgba(0, 0, 0, 0.05) 3px
+    );
+    opacity: 0.5;
+}
+html.exe-light-mode #siteNav::after {
+    background: radial-gradient(80% 40% at 50% -10%, var(--hk-accent-soft), transparent 70%);
+}
+html.exe-light-mode #siteNav a { color: var(--hk-accent-ink); }
+html.exe-light-mode #siteNav a:hover { background: var(--hk-accent-soft); }
+html.exe-light-mode #siteNav a.active,
+html.exe-light-mode #siteNav a[aria-current="page"] {
+    background: var(--hk-accent);
+    color: #fff;
+}
+html.exe-light-mode .pip-head .pip-logo { text-shadow: none; }
+html.exe-light-mode .pip-tab.active { color: #fff; }
+html.exe-light-mode .pip-stat .val { text-shadow: none; }
+
 /* =========================================================
    Reset / base
    ========================================================= */
