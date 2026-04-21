@@ -1,14 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
-  <rect x="2" y="2" width="12" height="12" fill="#000"/>
-  <rect x="3" y="3" width="5" height="10" fill="#D70000"/>
-  <rect x="8" y="3" width="5" height="10" fill="#D700D7"/>
-  <rect x="8" y="3" width="1" height="10" fill="#000"/>
-  <rect x="4" y="4" width="3" height="1" fill="#FFFFFF"/>
-  <rect x="4" y="6" width="3" height="1" fill="#FFFFFF"/>
-  <rect x="4" y="8" width="3" height="1" fill="#FFFFFF"/>
-  <rect x="4" y="10" width="3" height="1" fill="#FFFFFF"/>
-  <rect x="10" y="4" width="2" height="1" fill="#FFFFFF"/>
-  <rect x="10" y="6" width="2" height="1" fill="#FFFFFF"/>
-  <rect x="10" y="8" width="2" height="1" fill="#FFFFFF"/>
-  <rect x="10" y="10" width="2" height="1" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+  <g stroke="#ff6a00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.22">
+    <path d="M3 2.5H5.5"/>
+    <path d="M2.5 3V5.5"/>
+    <path d="M10.5 2.5H13"/>
+    <path d="M13.5 3V5.5"/>
+    <path d="M13.5 10.5V13"/>
+    <path d="M10.5 13.5H13"/>
+    <path d="M3 13.5H5.5"/>
+    <path d="M2.5 10.5V13"/>
+    <path d="M4.2 4.1H8V11.8H4.8C4.1 11.8 3.6 11.2 3.6 10.5V4.9C3.6 4.4 3.9 4.1 4.2 4.1Z"/>
+    <path d="M11.8 4.1H8V11.8H11.2C11.9 11.8 12.4 11.2 12.4 10.5V4.9C12.4 4.4 12.1 4.1 11.8 4.1Z"/>
+    <path d="M5.1 6H7.1"/>
+    <path d="M8.9 6H10.9"/>
+  </g>
+  <g stroke="#ffb347" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 2.5H5.5"/>
+    <path d="M2.5 3V5.5"/>
+    <path d="M10.5 2.5H13"/>
+    <path d="M13.5 3V5.5"/>
+    <path d="M13.5 10.5V13"/>
+    <path d="M10.5 13.5H13"/>
+    <path d="M3 13.5H5.5"/>
+    <path d="M2.5 10.5V13"/>
+    <path d="M4.2 4.1H8V11.8H4.8C4.1 11.8 3.6 11.2 3.6 10.5V4.9C3.6 4.4 3.9 4.1 4.2 4.1Z"/>
+    <path d="M11.8 4.1H8V11.8H11.2C11.9 11.8 12.4 11.2 12.4 10.5V4.9C12.4 4.4 12.1 4.1 11.8 4.1Z"/>
+    <path d="M5.1 6H7.1"/>
+    <path d="M8.9 6H10.9"/>
+  </g>
 </svg>

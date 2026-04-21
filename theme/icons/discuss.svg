@@ -1,1 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="4 3.9750000000000014 40 40" width="40" height="40" fill="none"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#eda900" stroke="#eda900"><path d="M281-240q-14 0-27.5-14T240-282v-98h500v-340h100q14 0 27 14t13 29v596L721-240H281ZM80-280v-558q0-14 13-28t27-14h519q15 0 28 13.5t13 28.5v356q0 14-13 28t-28 14H240L80-280Z" fill="#eda900" stroke="#eda900"></path></svg></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+  <g stroke="#ff6a00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.22">
+    <path d="M3 2.5H5.5"/>
+    <path d="M2.5 3V5.5"/>
+    <path d="M10.5 2.5H13"/>
+    <path d="M13.5 3V5.5"/>
+    <path d="M13.5 10.5V13"/>
+    <path d="M10.5 13.5H13"/>
+    <path d="M3 13.5H5.5"/>
+    <path d="M2.5 10.5V13"/>
+    <path d="M4 4.5H10.6C11.5 4.5 12.1 5.1 12.1 6V8.1C12.1 9 11.5 9.6 10.6 9.6H7.2L4.8 11.5V9.6H4C3.1 9.6 2.5 9 2.5 8.1V6C2.5 5.1 3.1 4.5 4 4.5Z"/>
+    <path d="M5.3 6.8H9.3"/>
+    <path d="M5.3 8H8.3"/>
+  </g>
+  <g stroke="#ffb347" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 2.5H5.5"/>
+    <path d="M2.5 3V5.5"/>
+    <path d="M10.5 2.5H13"/>
+    <path d="M13.5 3V5.5"/>
+    <path d="M13.5 10.5V13"/>
+    <path d="M10.5 13.5H13"/>
+    <path d="M3 13.5H5.5"/>
+    <path d="M2.5 10.5V13"/>
+    <path d="M4 4.5H10.6C11.5 4.5 12.1 5.1 12.1 6V8.1C12.1 9 11.5 9.6 10.6 9.6H7.2L4.8 11.5V9.6H4C3.1 9.6 2.5 9 2.5 8.1V6C2.5 5.1 3.1 4.5 4 4.5Z"/>
+    <path d="M5.3 6.8H9.3"/>
+    <path d="M5.3 8H8.3"/>
+  </g>
+</svg>
