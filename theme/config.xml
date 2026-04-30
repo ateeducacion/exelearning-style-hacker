@@ -5,14 +5,14 @@
     <version>2026</version>
     <compatibility>3.0</compatibility>
     <author>Área de Tecnología Educativa · Consejería de Educación, Formación Profesional, Actividad Física y Deportes del Gobierno de Canarias</author>
-    <license>Creative Commons BY-SA 4.0</license>
-    <license-url>http://creativecommons.org/licenses/by-sa/4.0/</license-url>
+    <license>Creative Commons: CC0 1.0 Universal (dominio público)</license>
+    <license-url>https://creativecommons.org/publicdomain/zero/1.0/</license-url>
     <description>Estilo hacker para eXeLearning, inspirado en Matrix (lluvia digital en el fondo), Tron (bordes luminosos de un píxel que se dibujan al cargar cada página) y el PipBoy de Fallout (menú lateral tipo terminal CRT). Texto verde fósforo sobre negro por defecto, intercambiable a naranja ámbar o cian desde el panel de tweaks. Incluye efecto de escritura tipo IA con cursor parpadeante en los iDevices de texto, overlay de arranque ROBCO/PIP-OS una vez por sesión, scanlines CRT opcionales y tipografía pixel conmutable.
 
 JetBrains Mono Font, by JetBrains, under the SIL Open Font License, Version 1.1.
 
 VT323 Font, by Peter Hull, under the SIL Open Font License, Version 1.1.
 
-iDevice icons: pixel-art set designed for this theme, CC BY-SA 4.0.</description>
+iDevice icons: pixel-art set designed for this theme, CC0 1.0 Universal (dominio público).</description>
     <downloadable>1</downloadable>
 </theme>

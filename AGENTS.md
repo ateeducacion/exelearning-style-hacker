@@ -30,7 +30,7 @@ Two things coexist in the same repo, by design:
 ├── reference/                   ← design handoff notes (not shipped)
 ├── scripts/                     ← build_water_cycle.py + social preview
 ├── .github/workflows/release.yml
-├── LICENSE                      ← CC0 for repo infrastructure
+├── LICENSE                      ← CC0 for original repo content
 ├── README.md                    ← user-facing README (short)
 └── AGENTS.md                    ← this file
 ```
@@ -162,7 +162,7 @@ What the builder produces:
    Tests/screenshots should clear these keys before asserting visual state.
 5. **Biome lints `style.js` loudly** (`var`, `$`, etc.). Every eXeLearning theme script is in this legacy style; this is expected and is not a CI blocker.
 6. **The extracted ELPX duplicates eXeLearning libs** (`libs/`, `idevices/`, `content/`). Regenerating the example refreshes those — they are intentionally committed so `git clone && python3 -m http.server` gives a live preview without a build step, and so `github-proxy.exelearning.dev` can zip the repo into a valid ELPX without any server-side assembly.
-7. **CC0 `LICENSE` is for the repository infrastructure** (README, CI configs, example prose). The **theme itself and the example illustrations are CC BY-SA 4.0** per `theme/config.xml` and the credits page — do not conflate the two.
+7. **Use one license for original content.** The repository's original content is CC0: the theme, README/project prose, example unit and generated illustrations. Third-party runtime files and bundled libraries keep their own declared licenses.
 8. **Matrix-rain canvas z-index.** `#hkMatrixRain` MUST sit at `z-index: 0` behind `.exe-content`. Any element that wants to appear above the rain (tweaks panel, boot overlay, PipBoy rail, modals) must declare its own positive `z-index`. Do not introduce a positioned ancestor with `z-index: auto` that would trap content below the canvas.
 9. **Pause rAF when rain is off.** When `body[data-rain="off"]`, `style.js` must `cancelAnimationFrame` (or bail early in the frame callback) — a paused canvas still burns CPU if the loop keeps ticking. Restart the loop when the tweak flips back to `on`.
 10. **Apply tweaks pre-render to avoid FOUC.** The stored `exeHackerTweaks` must be parsed and the corresponding body classes / `data-*` attributes applied **synchronously before paint** (inline snippet in `<head>` or the first line of `style.js` if it runs head-early). Otherwise the default green/scanlines/rain flashes before the user's saved accent (e.g. amber) takes over.
