@@ -1369,3 +1369,6 @@ body[data-pixel="none"] .pip-head .pip-logo { font-family: var(--mono); }
     #hackerTweaks { top: 50px; right: 12px; }
     .package-header { flex-wrap: wrap; }
 }
+.exe-open-exelearning { position: fixed; z-index: 10000; top: 25px; right: -58px; width: 235px; padding: 8px 6px; display: flex; align-items: center; justify-content: center; gap: 9px; transform: rotate(45deg); background: #071707; color: #00d700 !important; border: 2px solid #00d700; box-shadow: 3px 3px 0 #000; font: 16px/1 monospace; text-align: center; text-decoration: none !important; }
+.exe-open-logo { font-size: 22px; font-weight: 900; letter-spacing: -2px; }
+.exe-open-exelearning:focus, .exe-open-exelearning:hover { background: #00d700; color: #071707 !important; outline: 3px solid #071707; }
