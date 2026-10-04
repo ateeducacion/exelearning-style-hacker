@@ -146,7 +146,7 @@ What the builder produces:
 - 11 pages with descriptive titles (`Bienvenida`, `¿Qué es el ciclo del agua?`, `El Sol pone el agua en marcha`, …) and iDevice block icons.
 - Each text iDevice embeds one of the 11 PNG illustrations from `imagenes-generadas/` via `content/resources/<n>-*.png`.
 - Two interactive iDevices: `scrambled-list` for ordering the phases, `trueorfalse` for four statements.
-- A `download-source-file` iDevice on the last page (download the .elp).
+- A `download-source-file` iDevice on the last page (download the .elpx).
 - Two action buttons on intro and credits: **Abrir en eXeLearning** (`static.exelearning.dev/?url=https://github-proxy.exelearning.dev/?repo=ateeducacion/exelearning-style-hacker&branch=main`) and **Descargar estilo** (GitHub latest release `hacker.zip`).
 - `pp_addSearchBox=true`, `pp_addPagination=true`, `pp_theme=hacker`, `pp_exportElp=true`.
 

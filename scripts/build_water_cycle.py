@@ -182,7 +182,7 @@ def download_source_idevice(page_id: str, block_id: str, idv_id: str) -> str:
         'y de código abierto para crear recursos educativos.</p></div>'
         '<p class="exe-download-package-link">'
         '<a download="exe-package:elp-name" href="exe-package:elp" '
-        'style="background-color:#000000;color:#00ff9c;border:2px solid #00ff9c;font-family:\'JetBrains Mono\',monospace;">Descargar el archivo .elp</a></p>'
+        'style="background-color:#000000;color:#00ff9c;border:2px solid #00ff9c;font-family:\'JetBrains Mono\',monospace;">Descargar el archivo .elpx</a></p>'
     )
     return (
         f'<odeComponent>'
