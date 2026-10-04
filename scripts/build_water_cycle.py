@@ -303,7 +303,7 @@ def page_intro() -> str:
         'style="width:100%;max-width:240px;image-rendering:pixelated;border:2px solid #00ff9c;box-shadow:0 0 12px rgba(0,255,156,0.35);background:#000;display:block;" />'
         '</div>'
         '<div style="flex:1 1 280px;min-width:0;">'
-        '<p><strong>Bienvenido</strong> a este recurso educativo de ejemplo sobre el <em>ciclo del agua</em>, preparada por el <strong>Área de Tecnología Educativa</strong> de la Consejería de Educación, Formación Profesional, Actividad Física y Deportes del Gobierno de Canarias.</p>'
+        '<p><strong>Bienvenido</strong> a este recurso educativo de ejemplo sobre el <em>ciclo del agua</em>, preparado por el <strong>Área de Tecnología Educativa</strong> de la Consejería de Educación, Formación Profesional, Actividad Física y Deportes del Gobierno de Canarias.</p>'
         '<p>Aquí aprenderás las cuatro fases principales del ciclo — <strong>evaporación</strong>, <strong>condensación</strong>, <strong>precipitación</strong> y <strong>recogida</strong> — y podrás poner a prueba lo aprendido con un par de actividades.</p>'
         '<p>El estilo visual está inspirado en las terminales hacker del cine: la <strong>lluvia digital de Matrix</strong>, los <strong>bordes neón de Tron</strong> y el panel lateral estilo <strong>PipBoy de Fallout</strong>. Abre el engranaje de la derecha (o pulsa <kbd>T</kbd>) para cambiar el acento neón (verde / ámbar / cian), activar scanlines, flicker o el marco curvo CRT, y reproducir la intro de arranque.</p>'
         '</div>'
