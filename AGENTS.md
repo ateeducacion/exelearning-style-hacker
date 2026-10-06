@@ -139,6 +139,10 @@ make -C /path/to/exelearning export-elpx \
 cd /Users/ernesto/Downloads/git/exelearning-style-hacker
 rm -rf content content.dtd content.xml html idevices index.html libs search_index.js
 unzip -q -o /tmp/water-cycle.elpx -x "theme/*"
+
+# 4. Re-add the "Edit with eXeLearning" link (idempotent)
+perl -0777 -pi -e 's#</head>#<script src="edit-in-exelearning.js" defer></script>\n</head># unless /edit-in-exelearning\.js/' index.html
+perl -0777 -pi -e 's#</head>#<script src="../edit-in-exelearning.js" defer></script>\n</head># unless /edit-in-exelearning\.js/' html/*.html
 ```
 
 What the builder produces:
@@ -169,6 +173,7 @@ What the builder produces:
 11. **Boot overlay must outrank the tweaks panel.** Use `z-index: 9999` (or above) for `#hkBoot` and a lower one (e.g. `2000`) for `#hkTweaks` so pressing `T` during boot does not reveal a panel behind the intro.
 12. **Typewriter respects `prefers-reduced-motion`.** When the media query matches, skip the character-by-character reveal and render the prose instantly with the cursor hidden. Same fallback applies if the `typewriter` tweak is `off`.
 13. **Duplicated eXe libs vs. `libs/`.** Do not manually edit `libs/` or `idevices/`; they are re-extracted from each `.elpx` export. Your changes belong in `theme/`.
+14. **The "Edit with eXeLearning" link belongs to the published example only.** It lives in `edit-in-exelearning.js` at the repo root and step 4 of §6 adds it to `index.html` and `html/*.html`. Never put it in `theme/`, or every resource exported with the style would show it; the release workflow fails if `theme/style.js` or `theme/style.css` mention `exe-open-exelearning`.
 
 ## 8. Open work items (as of the session that produced this file)
 
