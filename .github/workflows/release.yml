@@ -41,7 +41,7 @@ jobs:
           cp "../exelearning-style-hacker-${{ steps.ver.outputs.version }}.zip" "../hacker.zip"
 
       - name: Publish release assets
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         if: startsWith(github.ref, 'refs/tags/')
         with:
           name: Hacker ${{ steps.ver.outputs.version }}
